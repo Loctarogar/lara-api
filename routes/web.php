@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApiJsonplaceholderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// ApiJsonplaceholderController
+Route::get('/api/jsonplaceholder/index', [ApiJsonplaceholderController::class, 'index']);
+Route::get('/api/jsonplaceholder/show', [ApiJsonplaceholderController::class, 'show']);
+
